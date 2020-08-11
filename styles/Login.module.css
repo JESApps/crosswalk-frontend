@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.textInput {
+  width: 615px;
+  height: 60px;
+  background-color: #EFEFEF;
+  color: #cdcdcd;
+  border: none;
+  border-radius: 40px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}

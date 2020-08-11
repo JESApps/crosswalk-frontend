@@ -1,0 +1,17 @@
+.primaryButton {
+  width: 310px;
+  height: 75px;
+  background-color: #AC5757;
+  border-radius: 40px;
+  border: none;
+  font-size: 30px;
+  color: white;
+}
+
+.checkinButton {
+  width: 185px;
+  height: 60px;
+  background-color: #6AB561;
+  border-radius: 40px;
+  border: none;
+}

@@ -13,4 +13,10 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: "Helvetica Neue"
+}
+
+h1 {
+  font-size: 65px;
+  font-weight: bold;
 }

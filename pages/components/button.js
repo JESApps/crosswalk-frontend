@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './button.module.css';
 
-export const PrimaryButton = (props) => {
+const PrimaryButton = (props) => {
   const { text } = props;
   return (
     <button type="button" className={styles.primaryButton} {...props}>
@@ -11,7 +11,7 @@ export const PrimaryButton = (props) => {
   );
 };
 
-export const CheckinButton = (props) => {
+const CheckInButton = (props) => {
   const { text } = props;
   return (
     <button type="button" className={styles.checkinButton} {...props}>
@@ -20,10 +20,29 @@ export const CheckinButton = (props) => {
   );
 };
 
+const Button = (props) => {
+  const { checkIn } = props;
+  if (checkIn) {
+    return <CheckInButton {...props} />;
+  }
+  return <PrimaryButton {...props} />;
+};
+
 PrimaryButton.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-CheckinButton.propTypes = {
+CheckInButton.propTypes = {
   text: PropTypes.string.isRequired,
 };
+
+Button.propTypes = {
+  checkIn: PropTypes.bool,
+  text: PropTypes.string.isRequired,
+};
+
+Button.defaultProps = {
+  checkIn: false,
+};
+
+export default Button;

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React, {useState} from 'react';
 import cookie from 'js-cookie';
 import fetch from 'node-fetch';
-import { PrimaryButton } from './components/button';
+import Button from './components/button';
 import styles from '../styles/Login.module.css';
 
 const url = 'http://localhost:3001';
@@ -45,7 +45,7 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <PrimaryButton text="Login" onClick={() => login(email, password)} />
+        <Button text="Login" onClick={() => login(email, password)} />
       </main>
     </div>
   );
